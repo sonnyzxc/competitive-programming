@@ -1,0 +1,17 @@
+print("Smiley Face:")
+print(" . . . ")
+print(". O O .")
+print(". \_/ .")
+print(" . . . ")
+
+print("\nSad Face:")
+print(" . . . ")
+print(". O O,.")
+print(".  -  .")
+print(" . . . ")
+
+print("\nSurprised Face:")
+print(" . . . ")
+print(". O O .")
+print(".  o  .")
+print(" . . . ")

@@ -1,0 +1,10 @@
+f = open("text.txt","r")
+data = f.read()
+words = data.split()
+wordcount = len(words)
+f.close()
+
+f2 = open("text.txt","r")
+data2 = f2.read().replace(" ","")
+charactercount = len(data2)
+print("Average Word Length: ",charactercount/wordcount)
