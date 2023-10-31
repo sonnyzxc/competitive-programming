@@ -1,0 +1,23 @@
+{
+	"Print to console": {
+	 "prefix": "cp-template",
+	 "body": [
+		"#include<bits/stdc++.h>\n",
+		"using namespace std;\n",
+		"using ll = long long;",
+		"using ld = long double;",
+		"#define endl \"\\n\";",
+		"#define ff first",
+		"#define ss second\n",
+		"void solve(){",
+		"\treturn;",
+		"}\n",
+		"int main() {",
+		"\tint A, B;",
+		"\tcin >> A >> B;",
+		"\tsolve();",
+		"}\n",
+	 ],
+	 "description": "C++ CP Template"
+	}
+}

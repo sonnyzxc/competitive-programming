@@ -7,9 +7,7 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# stupid vscode settings
-.vscode/
+*/output
 
 #########
 # For C #
@@ -48,4 +46,15 @@ Thumbs.db
 *.out
 *.app
 
+*.bin
 
+#########
+# Misc. #
+#########
+# Extensions
+*/.cph
+
+# IDEs
+.vscode
+*/.idea
+*/out
