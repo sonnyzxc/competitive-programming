@@ -11,11 +11,16 @@ typedef long double ld;
 
 int main() {
   string s;
-  int n, t = 0;
-  cin >> n >> s;
-
-  for (char &c : s) {
-    t += c - '0';
+  vi i(26, -1);
+  cin >> s;
+  for (int j = 0; j < (int) s.size(); j++) {
+    char c = s[j];
+    if (i[c - 'a'] == -1) {
+      i[c - 'a'] = j;
+    }
   }
-  cout << t << nl;
+
+  for (auto &x : i) {
+    cout << x << " ";
+  }
 }

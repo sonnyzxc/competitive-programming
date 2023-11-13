@@ -10,12 +10,5 @@ typedef long double ld;
 #define ss second
 
 int main() {
-  string s;
-  int n, t = 0;
-  cin >> n >> s;
-
-  for (char &c : s) {
-    t += c - '0';
-  }
-  cout << t << nl;
+  cout << "         ,r'\"7\nr`-_   ,'  ,/\n \\. \". L_r'\n   `~\\/\n      |\n      |" << nl;
 }
