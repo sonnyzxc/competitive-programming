@@ -1,0 +1,20 @@
+{
+	"Print to console": {
+		"scope": "python",
+		"prefix": "python-cp",
+		"body": [
+			"from sys import stdin, stdout\n"
+			"def main():"
+			"\tfor _ in range(int(stdin.readline())):"
+			"\t\tn = int(stdin.readline())"
+			"\t\ta = list(map(int, stdin.readline().split()))"
+			"\t\tx, y = map(int, stdin.readline().split())"
+			"\t\tt = 0"
+			"\t\tret = []\n"
+			"\tstdout.write(t)"
+			"\tstdout.write(''.join(ret))\n"
+			"main()"
+		],
+		"description": "Python CP Template"
+	}
+}
