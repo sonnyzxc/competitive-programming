@@ -48,6 +48,8 @@ Thumbs.db
 
 *.bin
 
+*/*/output
+
 #########
 # Misc. #
 #########
