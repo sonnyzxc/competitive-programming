@@ -8,13 +8,14 @@ def main():
   i2c = lambda n: chr(ord('a') + n)
   c2i = lambda c: ord(c) - ord('a')
 
-  t = 0
-  s = list(map(str, si().strip()))
-  for c in s:
-    if c == '4' or c == '7':
-      t += 1
+  xSum, ySum, zSum = 0, 0, 0
 
-  check = "".join(sorted(list(set(list(map(str, str(t)))))))
-  stdout.write('YES\n' if (check ==  '47' or check == '4' or check == '7') else 'NO\n')
+  for _ in range(ii()):
+    x, y, z = mi()
+    xSum += x
+    ySum += y
+    zSum += z
+
+  stdout.write('YES\n' if (xSum == 0 and ySum == 0 and zSum == 0) else 'NO\n')
 
 main()
