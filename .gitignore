@@ -48,7 +48,9 @@ Thumbs.db
 
 *.bin
 
+# C Compilers
 */*/output
+*/*/*.dSYM
 
 #########
 # Misc. #
