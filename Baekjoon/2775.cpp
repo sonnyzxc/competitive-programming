@@ -12,7 +12,7 @@ int main() {
     int T, K, N;
     vector<vi> dp(15, vi(15, -1));
     cin >> T;
-    // if (X == 0) return Y * (Y + 1) / 2;
+    // if (X == 0) return Y * (Y + 2) / 2;
 
     // if (dp[X][Y] != -1) return dp[X][Y];
 
