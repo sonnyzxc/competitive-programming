@@ -9,6 +9,8 @@
 		"#define ff first",
 		"#define ss second",
 		"#define vi vector<int>",
+		"#define pii pair<int, int>",
+		"#define pis pair<int, string>",
 		"#define endl \"\\n\"\n",
 		"int main() {",
 		"\tint A, B;",
