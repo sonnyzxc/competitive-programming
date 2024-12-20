@@ -13,6 +13,8 @@
 		"#define pis pair<int, string>",
 		"#define endl \"\\n\"\n",
 		"int main() {",
+		"\tios_base::sync_with_stdio(false);",
+		"\tcin.tie(NULL);\n",
 		"\tint A, B;",
 		"\tcin >> A >> B;",
 		"}\n",
