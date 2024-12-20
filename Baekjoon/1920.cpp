@@ -10,19 +10,13 @@ using ld = long double;
 #define pis pair<int, string>
 #define endl "\n"
 
-int N;
-vi Li;
-
-/* Use Binary Search. */
-int binarySearch(int x) {
-    for (auto &x: Li) cout << x;
-    int L = 0, R = N- 1;
+/* Solution via Binary Search. */
+int binarySearch(int x, int N, const vi &Li) {
+    int L = 0, R = N - 1;
     int mid;
     while (L <= R) {
-        // mid = L + (R - L) / 2; // prevent overflow (remembered from Kattis?)
+        // int mid = L + (R - L) / 2; // prevent overflow (remembered from Kattis?)
         mid = (L + R) / 2;
-        cout << "L: " << L << " , R: " << R << ", mid: " << mid << endl;
-        cout << "at mid value: " << Li.size() << endl; 
         if (Li[mid] == x) return 1;
         if (Li[mid] < x) L = mid + 1;
         else R = mid - 1;
@@ -31,13 +25,13 @@ int binarySearch(int x) {
 }
 
 int main() {
-    vi Li;
-    int Ai;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int N;
     cin >> N;
-    for (int i = 0; i < N; i++) {
-        cin >> Ai;
-        Li.push_back(Ai);
-    }
+    vi Li(N);
+    for (auto &x : Li) cin >> x;
 
     sort(Li.begin(), Li.end());
 
@@ -45,7 +39,7 @@ int main() {
     cin >> M;
     while (M--) {
         cin >> Mi;
-        cout << binarySearch(Mi) << endl;
+        cout << binarySearch(Mi, N, Li) << endl;
     }
 }
 
