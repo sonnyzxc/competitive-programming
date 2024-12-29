@@ -10,15 +10,14 @@ using ld = long double;
 #define pis pair<int, string>
 #define endl "\n"
 
+/* UNFINISHED */
+
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
     string S, num = "";
     cin >> S;
-    // if (S[0] != '-') {
-    //     S.insert(0, 1, '+');
-    // }
 
     stack<int> s;
     s.push(0);
