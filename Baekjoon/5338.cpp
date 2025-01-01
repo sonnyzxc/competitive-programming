@@ -10,6 +10,10 @@ typedef long double ld;
 #define ss second
 
 int main() {
-  int A, B;
-  cin >> A >> B;
+  cout <<
+    "       _.-;;-._" << nl <<
+    "'-..-'|   ||   |" << nl <<
+    "'-..-'|_.-;;-._|" << nl <<
+    "'-..-'|   ||   |" << nl <<
+    "'-..-'|_.-''-._|" << nl;
 }
