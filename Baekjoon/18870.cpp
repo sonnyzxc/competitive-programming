@@ -10,25 +10,29 @@ using ld = long double;
 #define pis pair<int, string>
 #define endl "\n"
 
-/* Unfinished. */
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
     int N;
-    ll x;
     cin >> N;
-    vector<ll> r(N);
-    for (auto &x : r) cin >> x;
+    vector<pair<ll, int>> r(N);
 
+    ll x;
     for (int i = 0; i < N; i++) {
-        int t = 0;
-        ll cur = r[i];
-        for (int j = 0; j < N; j++) {
-            if (i == j) continue;
-            if (cur > r[j]) t++;
-        }
-        cout << t << " ";
+        cin >> x;
+        r[i] = {x, i};
     }
-    cout << endl;
+    sort(r.begin(), r.end());
+
+    vector<ll> ans(N);
+    ll rank = 0;
+
+    ans[r[0].ss] = rank;
+    for (int i = 1; i < N; i++) {
+        if (r[i].ff != r[i - 1].ff) rank++;
+        ans[r[i].ss] = rank;
+    }
+
+    for (auto &x : ans) cout << x << " ";
 }
