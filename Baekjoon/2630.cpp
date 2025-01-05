@@ -10,7 +10,17 @@ using ld = long double;
 #define pis pair<int, string>
 #define endl "\n"
 
-/* unfinished */
+bool isSame(vector<vi> &arr, int x, int y, int size) {
+    int col = arr[x][y];
+    for (int i = x; i < x + size; i++) {
+        for (int j = y; j < y + size; j++) {
+            if (arr[i][j] != col) return 0;
+        }
+    }
+
+    return 1;
+}
+
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -21,18 +31,34 @@ int main() {
     vector<vi> arr(N, vi(N));
 
     // input
-    for (int j = 0; j < N; j++) {
-        for (int i = 0; i < N; i++) {
-            cin >> arr[j][i];
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            cin >> arr[i][j];
         }
     }
 
     // solve
-    int blue = 9;
-    while (1) {
+    int blue = 0, white = 0;
+    queue<pair<int, pii>> points;
+    points.push({N, {0, 0}});
+    while (!points.empty()) {
+        int units = points.front().ff;
+        int x = points.front().ss.ff;
+        int y = points.front().ss.ss;
+        points.pop();
 
+        if (isSame(arr, x, y, units)) {
+            if (arr[x][y]) blue++;
+            else white++;
+        } else {
+            int newUnits = units / 2;
+            points.push({newUnits, {x, y}});
+            points.push({newUnits, {x, y + newUnits}});
+            points.push({newUnits, {x + newUnits, y}});
+            points.push({newUnits, {x + newUnits, y + newUnits}});
+        }
     }
 
-
-    cout << blue << endl << N * N / 4 - blue;
+    // output [white, blue]
+    cout << white << endl << blue << endl;
 }

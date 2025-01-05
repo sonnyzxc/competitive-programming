@@ -10,63 +10,33 @@ using ld = long double;
 #define pis pair<int, string>
 #define endl "\n"
 
-/* UNFINISHED */
-
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    string S, num = "";
-    cin >> S;
+    string exp;
+    cin >> exp;
 
-    stack<int> s;
-    s.push(0);
-    bool add = 1;
+    stringstream ss(exp);
+    string term;
+    vector<string> segments;
 
-    for (auto &c : S) {
-        if (isdigit(c)) {
-            num += c;
-        } else if (c == '-') {
-            s.push(stoi(num));
-            int sec = s.top();
-            s.pop();
-            int fir = s.top();
-            s.pop();
+    while (getline(ss, term, '-')) segments.push_back(term);
 
-            if (add) {
-                s.push(fir + sec);
-            } else {
-                s.push(fir - sec);
-            }
-            add = 0;
-            num = "";
-        } else if (c == '+') {
-            s.push(stoi(num));
-            int sec = s.top();
-            s.pop();
-            int fir = s.top();
-            s.pop();
+    int ans = 0;
 
-            if (add) {
-                s.push(fir + sec);
-            } else {
-                s.push(fir - sec);
-            }
-            add = 1;
-            num = "";
-        }
+    stringstream f(segments[0]);
+    string n;
+    while (getline(f, n, '+')) ans += stoi(n);
+
+    segments.erase(segments.begin());
+    for (auto &c : segments) {
+        int temp = 0;
+        stringstream cur(c);
+        while (getline(cur, n, '+')) temp += stoi(n);
+
+        ans -= temp;
     }
 
-    s.push(stoi(num));
-    int sec = s.top();
-    s.pop();
-    int fir = s.top();
-    s.pop();
-
-    if (add) {
-        s.push(fir + sec);
-    } else {
-        s.push(fir - sec);
-    }
-    cout << s.top() << endl;
+    cout << ans << endl;
 }
