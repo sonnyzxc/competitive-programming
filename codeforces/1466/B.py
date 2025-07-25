@@ -1,3 +1,5 @@
+# incomplete
+
 for x in range(int(input())):
     t = 0
     a = int(input())
@@ -12,5 +14,3 @@ for x in range(int(input())):
     t += len(na)
 
     print("t value",t)
-
-

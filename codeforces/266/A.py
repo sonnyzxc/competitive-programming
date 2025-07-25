@@ -7,4 +7,3 @@ for x in range(len(s) - 1):
         t += 1
 
 print(t)
-

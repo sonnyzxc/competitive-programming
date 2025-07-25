@@ -9,6 +9,6 @@ for _ in range(int(input())):
     if not added and e == m:
       e += 1
       added = True
-    t *= e 
+    t *= e
 
   print(t)

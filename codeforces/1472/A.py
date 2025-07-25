@@ -13,5 +13,3 @@ for x in range(int(input())):
         else:
             print("NO")
             break
-            
-            

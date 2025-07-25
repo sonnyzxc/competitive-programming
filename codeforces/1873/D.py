@@ -10,11 +10,11 @@ for _ in range(int(input())):
       flag = True
       t += 1
 
-    if flag: 
+    if flag:
       c += 1
 
     if c >= k:
       flag = False
       c = 0
 
-  print(t) 
+  print(t)
