@@ -22,7 +22,7 @@ int main() {
     }
 
     sort(score.begin(), score.end(), greater<int>());
-    cout << score[0] + score[1] + score[2] + score [3] + score[4] << endl;
+    cout << score[0] + score[1] + score[2] + score[3] + score[4] << endl;
     vi ans;
     for (int i = 4; i >= 0; i--) ans.push_back(idx[score[i]]);
     sort(ans.begin(), ans.end());
