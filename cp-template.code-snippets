@@ -11,7 +11,7 @@
 		"#define vi vector<int>",
 		"#define pii pair<int, int>",
 		"#define pis pair<int, string>",
-		"#define endl \"\\n\"\n",
+		"#define nl \"\\n\"\n",
 		"int main() {",
 		"\tios_base::sync_with_stdio(false);",
 		"\tcin.tie(NULL);\n",
